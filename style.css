@@ -30,13 +30,13 @@ p {
     transition: all .5s ease;
 }
 
-.learnMore:hover, .seeAll {
+.learnMore:hover, .seeAll:hover {
     img {
         margin-left: 5px;
     }
 }
 
-.learnMore:active, .seeAll{
+.learnMore:active, .seeAll:active{
     img {
             margin-left: 0px;
         }
