@@ -11,6 +11,12 @@
     box-sizing: border-box;
 }
 
+/* Evita flash antes do GSAP */
+.pre-animate {
+    opacity: 0;
+    visibility: hidden;
+}
+
 h1,
 h3,
 .statsNumber,
