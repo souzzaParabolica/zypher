@@ -233,7 +233,7 @@ mm.add("(min-width: 769px) and (max-width: 1366px)", () => {
         scrollTrigger: {
             trigger: ".pessoas",
             start: "top 40%",
-            markers:true
+            markers:false
         }
     })
 });
