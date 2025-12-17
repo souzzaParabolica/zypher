@@ -26,14 +26,20 @@ p {
     background: linear-gradient(90deg, #F7CC5D 0%, #8FC572 100%);
 }
 
-.learnMore img {
+.learnMore img, .seeAll {
     transition: all .5s ease;
 }
 
-.learnMore:hover {
+.learnMore:hover, .seeAll {
     img {
         margin-left: 5px;
     }
+}
+
+.learnMore:active, .seeAll{
+    img {
+            margin-left: 0px;
+        }
 }
 
 .stats {
