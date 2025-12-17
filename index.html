@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="overflow-x-hidden">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IM+Fell+English+SC&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Tailwind CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- GSAP Core -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+
+    <!-- GSAP ScrollTrigger Plugin -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+
+    <link rel="stylesheet" href="style.css" />
+    <title>Zypher - Digital Wallet</title>
+  </head>
+  <body class="bg-[#202020] relative">
+    <div class="absolute inset-0 z-[px-10] pointer-events-none overflow-hidden">
+      <img
+        class="absolute left-[-40%] xl:top-[-20%] w-[150%] opacity-50"
+        src="Assets/Img/circlesBlur/Laranja.svg"
+      />
+      <img
+        class="absolute left-[60%] top-[16%] xl:top-[10%] w-[80%] xl:w-[30%] opacity-50"
+        src="Assets/Img/circlesBlur/Verde.svg"
+      />
+      <img
+        class="absolute left-[-40%] xl:left-[80%] top-[35%] xl:top-[35%] w-[80%] xl:w-[50%] opacity-50"
+        src="Assets/Img/circlesBlur/Azul.svg"
+      />
+
+      <img
+        class="absolute z-[10] left-[50%] xl:left-[60%] top-[17%] xl:top-[0%] w-[80%] xl:w-[60%] opacity-1"
+        src="Assets/Img/things/cruzVerde.svg"
+      />
+
+      <img
+        class="absolute z-[20] left-[-40%] xl:left-[-20%] top-[35%] xl:top-[55%] w-[80%] xl:w-[50%] opacity-1"
+        src="Assets/Img/things/estrelaDourada.svg"
+      />
+    </div>
+    <header
+      class="w-full flex justify-center items-center py-[2rem] xl:px-[10rem] xl:py-[4rem]"
+    >
+      <nav
+        class="flex w-full flex-col xl:flex-row justify-between items-center gap-[4rem] xl:gap-0"
+      >
+        <h1 class="text-3xl xl:text-4xl font-semibold text-white/80">Zypher</h1>
+        <ul
+          class="hidden xl:flex flex-row justify-center items-center gap-[4rem] text-white/70 font-[poppins] font-semibold text-lg"
+        >
+          <li
+            class="cursor-pointer border-b-2 border-transparent pb-[2px] rounded-[5%] transition-all duration-300 ease-in-out hover:border-white/80 hover:-translate-y-[2px]"
+          >
+            Collection
+          </li>
+
+          <li
+            class="cursor-pointer border-b-2 border-transparent pb-[2px] rounded-[5%] transition-all duration-300 ease-in-out hover:border-white/80 hover:-translate-y-[2px]"
+          >
+            Market Place
+          </li>
+
+          <li
+            class="cursor-pointer border-b-2 border-transparent pb-[2px] rounded-[5%] transition-all duration-300 ease-in-out hover:border-white/80 hover:-translate-y-[2px]"
+          >
+            Community
+          </li>
+
+          <button
+            class="border border-white/80 rounded-[150px] py-4 px-8 xl:ml-[2rem] hover:scale-[1.05] transition duration-300 ease"
+          >
+            Connect Wallet
+          </button>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <section
+        class="hero relative w-full flex flex-col justify-center items-center xl:items-start px-[2rem] xl:px-[10rem] py-[5rem]"
+      >
+        <div class="xl:w-[50%] flex justify-center items-start flex-col">
+          <h2
+            class="text-4xl xl:text-8xl font-semibold text-white/80 font-[poppins] xl:leading-tight"
+          >
+            Discover Digital Art and Colletc NFTs.
+          </h2>
+          <p class="text-lg text-white/70 mt-[2rem] leading-7">
+            Zypher is a shared liquidify NFT market smart contract wich is used
+            by multiple website to provide the user the best possible experience
+          </p>
+
+          <div class="flex justify-center items-center gap-12 mt-[3rem]">
+            <button
+              class="getStarted text-black/80 font-semibold font-poppins rounded-[150px] py-3 px-4 xl:px-10 text-sm xl:text-xl cursor-pointer hover:scale-[1.05] hover:-translate-y-[2px] transition duration-500 ease"
+            >
+              Get Started
+            </button>
+            <button
+              class="learnMore text-white/80 font-semibold font-poppins flex justify-center items-center gap-4 text-sm xl:text-xl cursor-pointer hover:scale-[1.05] transition duration-500 ease"
+            >
+              Learn More <img src="Assets/Img/things/arrowWhite.svg" alt="" />
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <div
+        class="flex flex-row justify-center items-center px-[2rem] xl:px-[10rem] py-[5rem] w-full"
+      >
+        <div
+          class="stats rounded-3xl flex flex-col xl:flex-row justify-around items-center py-[4rem] px-[3rem] w-full"
+        >
+          <div class="flex flex-col justify-center items-start gap-5">
+            <p class="text-sm text-semibold text-white/90">Artwork</p>
+            <p class="stastNumber text-5xl font-bold text-white/90">27K+</p>
+          </div>
+
+          <div class="flex flex-col justify-center items-start gap-5">
+            <p class="text-sm text-semibold text-white/90">Action</p>
+            <p class="stastNumber text-5xl font-bold text-white/90">25K+</p>
+          </div>
+
+          <div class="flex flex-col justify-center items-start gap-5">
+            <p class="text-sm text-semibold text-white/90">Artist</p>
+            <p class="stastNumber text-5xl font-bold text-white/90">12K+</p>
+          </div>
+
+          <!-- SEPARAÇÃO -->
+
+          <div
+            class="flex flex-col justify-center items-center mt-[5rem] xl:mt-0"
+          >
+            <div class="flex justify-center items-center gap-5">
+              <p class="text-xl font-semibold text-white/90">Art</p>
+              <p class="text-3xl font-semibold text-white/90">3.4 ETH</p>
+            </div>
+            <div
+              class="flex justify-center items-center gap-2 relative w-full mt-[1.5rem] xl:mt-[3rem]"
+            >
+              <img
+                class="w-[80px] rounded-[50%]"
+                src="Assets/Img/img.jfif"
+                alt=""
+              />
+              <img
+                class="w-[80px] rounded-[50%]"
+                src="Assets/Img/img.jfif"
+                alt=""
+              />
+              <img
+                class="w-[80px] rounded-[50%]"
+                src="Assets/Img/img.jfif"
+                alt=""
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <section
+        class="z-[30] relative popular flex flex-col xl:flex-row justify-center items-center w-full px-[2rem] xl:px-[10rem] py-[5rem]"
+      >
+        <div
+          class="um flex flex-col justify-center items-center gap-[5rem] relative"
+        >
+          <div class="flex flex-col xl:flex-row justify-center items-center gap-[5rem] xl:gap-5">
+            <div
+              class="personOneBox relative h-[200px] w-[300px] rounded-[50px] relative"
+            >
+              <img
+                class="absolute top-[-35%] left-[20%] w-[60%]"
+                src="Assets/Img/persons/person1.png"
+                alt=""
+              />
+            </div>
+            <div
+              class="personTwoBox relative h-[200px] w-[300px] rounded-[50px] relative"
+            >
+              <img
+                class="absolute top-[-68%] left-[10%] w-[80%]"
+                src="Assets/Img/persons/person2.png"
+                alt=""
+              />
+            </div>
+          </div>
+
+          <!-- SEPARAÇÃO -->
+
+          <div class="flex flex-col xl:flex-row justify-center items-center gap-[5rem] xl:gap-5">
+            <div
+              class="personThreeBox relative h-[200px] w-[300px] rounded-[50px]"
+            >
+              <img
+                class="absolute top-[-69%] left-[15%] w-[75%]"
+                src="Assets/Img/persons/person3.png"
+                alt=""
+              />
+            </div>
+            <div
+              class="personFourthBox relative h-[200px] w-[300px] rounded-[50px]"
+            >
+              <img
+                class="absolute top-[-36%] left-[10%] w-[70%]"
+                src="Assets/Img/persons/person4.png"
+                alt=""
+              />
+            </div>
+          </div>
+        </div>
+
+        <div class="dois flex flex-col justify-center items-start relative mt-[8rem] xl:mt-0">
+          <p class="text-md font-semibold text-[#596452]">Popular item</p>
+
+          <h2
+            class="popularTitle text-white/80 font-semibold text-6xl leading-[5rem] mt-[2rem]"
+          >
+            Hot Trending <br />
+            On This <br />
+            Week.
+          </h2>
+          <p class="text-md font-semibold text-white/70 my-[2rem] xl:max-w-[65%]">
+            Various kind of NFTs that are trending the trend will be reset every
+            week. Don't miss out on the best NFTs every week.
+          </p>
+          <button
+            class="learnMore text-white/80 font-semibold font-poppins flex justify-center items-center gap-4 text-sm xl:text-xl cursor-pointer hover:scale-[1.05] transition duration-500 ease"
+          >
+            See all <img src="Assets/Img/things/arrowWhite.svg" alt="" />
+          </button>
+        </div>
+      </section>
+    </main>
+
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script src="https://unpkg.com/lenis@1.3.15/dist/lenis.min.js"></script>
+    <script>
+      lucide.createIcons();
+    </script>
+    <script src="animation.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
