@@ -213,6 +213,17 @@ mm.add("(min-width: 769px) and (max-width: 1366px)", () => {
     },
   });
 
+  gsap.to(".brilhoVerde", {
+    y: 200,
+    scrollTrigger: {
+      trigger: ".hero",
+      start: "top 0%",
+      end: "bottom -40%",
+      scrub: 2,
+      markers: false,
+    },
+  });
+
   gsap.from(".work, .artist, .action, .art, .profile", {
     opacity: 0,
     filter: "blur(5px)",
@@ -263,6 +274,17 @@ mm.add("(min-width: 1367px) and (max-width: 1930px)", () => {
       trigger: ".hero",
       start: "top 30%",
       end: "bottom 30%",
+      scrub: 2,
+      markers: false,
+    },
+  });
+
+  gsap.to(".brilhoVerde", {
+    y: 200,
+    scrollTrigger: {
+      trigger: ".hero",
+      start: "top 0%",
+      end: "bottom -40%",
       scrub: 2,
       markers: false,
     },
