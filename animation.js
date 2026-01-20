@@ -170,7 +170,7 @@ mm.add("(max-width: 768px)", () => {
       });
     });
 
-    gsap.from(".dois p, .dois h2, .dois p", {
+    gsap.from(".dois p, .dois h2, .dois p, .dois div", {
       y: 30,
       opacity: 0,
       duration: 1,
@@ -202,7 +202,7 @@ mm.add("(max-width: 768px)", () => {
       stagger: 0.1,
       scrollTrigger: {
         trigger: ".topList",
-        start: "top 55%",
+        start: "top 60%",
         markers: false,
       },
     });
@@ -212,7 +212,7 @@ mm.add("(max-width: 768px)", () => {
       duration:2,
       scrollTrigger: {
         trigger: ".topList",
-        start: "top 55%",
+        start: "top 60%",
         markers: false,
       },
     });
