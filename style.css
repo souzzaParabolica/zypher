@@ -86,6 +86,37 @@ p {
     background-color: rgba(48, 48, 48, 0.312);
 }
 
-.logos img{
+.oculus{
     filter: brightness(0) invert(1) opacity(1);
 }
+.greec{
+    filter: saturate(1);
+}
+
+ /* Adicionar ao seu CSS existente */
+  footer {
+    will-change: transform, opacity;
+    backface-visibility: hidden;
+    -webkit-font-smoothing: antialiased;
+  }
+  
+  /* Opcional: adicionar uma linha sutil no topo do footer */
+  footer::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 10%;
+    right: 10%;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.1), transparent);
+    opacity: 0;
+    transform: scaleX(0);
+    transform-origin: center;
+    transition: all 0.8s ease;
+  }
+  
+  /* Adicione esta classe via JS se quiser animar a linha */
+  .footer-revealed::before {
+    opacity: 1;
+    transform: scaleX(1);
+  }
