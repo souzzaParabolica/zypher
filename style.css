@@ -20,7 +20,7 @@
 h1,
 h3,
 .statsNumber,
-.popularTitle {
+.popularTitle, .artistsTitle, .subscribe {
     font-family: "Clash Display", sans-serif;
 }
 
@@ -78,4 +78,14 @@ p {
 
 .dois{
     flex: 1;
+}
+
+.artists{
+    backdrop-filter: blur(30px);
+    -webkit-backdrop-filter: blur(30px);
+    background-color: rgba(48, 48, 48, 0.312);
+}
+
+.logos img{
+    filter: brightness(0) invert(1) opacity(1);
 }
