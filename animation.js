@@ -174,7 +174,7 @@ mm.add("(max-width: 768px)", () => {
       y: 30,
       opacity: 0,
       duration: 1,
-      stagger: 0.1,
+      stagger:0.1,
       scrollTrigger: {
         trigger: ".dois",
         start: "top 40%",
@@ -442,90 +442,14 @@ function initTextScroll() {
 
 initTextScroll();
 
-window.addEventListener("resize", () => {
-  ScrollTrigger.getAll().forEach(t => t.kill());
-  initTextScroll();
-});
-
-// Animação principal do footer
-  const footerAnimation = () => {
-    // Selecionar elementos do footer
-    const footer = document.querySelector('footer');
-    const columns = gsap.utils.toArray('footer > div');
-    const headings = gsap.utils.toArray('footer p.text-lg');
-    const links = gsap.utils.toArray('footer p.text-sm');
-    const socialIcons = gsap.utils.toArray('.socialIcons span');
-    const copyright = document.querySelector('footer p:last-child');
-
-    // Configurar estado inicial
-    gsap.set(footer, { opacity: 0, y: 50 });
-    gsap.set(columns, { opacity: 0, y: 30 });
-    gsap.set(headings, { opacity: 0, y: 20 });
-    gsap.set(links, { opacity: 0, x: -10 });
-    gsap.set(socialIcons, { opacity: 0, scale: 0.8, rotate: -5 });
-    gsap.set(copyright, { opacity: 0, y: 10 });
-
-    // Criar timeline da animação
-    const tl = gsap.timeline({
+  gsap.from("footer div", {
+      y: 30,
+      opacity: 0,
+      duration: 1,
+      stagger:0.2,
       scrollTrigger: {
-        trigger: footer,
-        start: "top 85%",
-        end: "bottom bottom",
-        toggleActions: "play none none reverse",
-        markers: false, // Defina como true para debug
+        trigger: "footer",
+        start: "top 40%",
+        markers: false,
       },
-      defaults: { ease: "power3.out", duration: 0.8 }
     });
-
-    // Animação principal
-    tl.to(footer, {
-      opacity: 1,
-      y: 0,
-      duration: 1.2,
-      ease: "power3.out"
-    })
-    .to(columns, {
-      opacity: 1,
-      y: 0,
-      stagger: 0.1,
-      duration: 0.6
-    }, "-=0.8")
-    .to(headings, {
-      opacity: 1,
-      y: 0,
-      stagger: 0.05,
-      duration: 0.5
-    }, "-=0.6")
-    .to(links, {
-      opacity: 1,
-      x: 0,
-      stagger: 0.03,
-      duration: 0.4
-    }, "-=0.4")
-    .to(socialIcons, {
-      opacity: 1,
-      scale: 1,
-      rotate: 0,
-      stagger: 0.08,
-      duration: 0.5,
-      ease: "back.out(1.7)"
-    }, "-=0.3")
-    .to(copyright, {
-      opacity: 1,
-      y: 0,
-      duration: 0.6,
-      ease: "power2.out"
-    }, "-=0.2");
-  };
-
-  // Inicializar animação quando a página carregar
-  window.addEventListener('DOMContentLoaded', footerAnimation);
-
-  // Opcional: Recriar animação em redimensionamento
-  let resizeTimer;
-  window.addEventListener('resize', () => {
-    clearTimeout(resizeTimer);
-    resizeTimer = setTimeout(() => {
-      ScrollTrigger.refresh();
-    }, 250);
-  });
