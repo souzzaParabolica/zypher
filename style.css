@@ -30,6 +30,11 @@ p {
 
 .getStarted {
     background: linear-gradient(90deg, #F7CC5D 0%, #8FC572 100%);
+    opacity: 0;
+}
+
+.learnMore{
+    opacity: 0;
 }
 
 .learnMore img, .seeAll img {

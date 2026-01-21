@@ -89,7 +89,7 @@ heroTl
       ease: "power2.out",
       clearProps: "transform",
     },
-    "-=0.6"
+    "-=1"
   );
 
 // ===============================
