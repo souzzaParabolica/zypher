@@ -402,7 +402,8 @@ mm.add("(min-width: 1367px) and (max-width: 1930px)", () => {
   });
 
   gsap.to(".brilhoVerde", {
-    y: 200,
+    y: 500,
+    x:300,
     scrollTrigger: {
       trigger: ".hero",
       start: "top 0%",
@@ -467,7 +468,7 @@ mm.add("(min-width: 1367px) and (max-width: 1930px)", () => {
       duration: 1,
       scrollTrigger: {
         trigger: ".getStartedEnd",
-        start: "top 87%",
+        start: "top 70%",
         markers: false,
       },
     });

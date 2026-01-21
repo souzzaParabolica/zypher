@@ -33,6 +33,10 @@ p {
     opacity: 0;
 }
 
+.subscribeButton{
+    background: linear-gradient(90deg, #F7CC5D 0%, #8FC572 100%);
+}
+
 .learnMore{
     opacity: 0;
 }
