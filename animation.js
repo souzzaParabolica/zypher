@@ -241,6 +241,18 @@ mm.add("(max-width: 768px)", () => {
       },
     });
 
+     gsap.from("footer div", {
+      y: 30,
+      opacity: 0,
+      duration: 1,
+      stagger:0.2,
+      scrollTrigger: {
+        trigger: "footer",
+        start: "top 40%",
+        markers: false,
+      },
+    });
+
 });
 
 // SEPARAÇÃO DAS ANIMAÇÕES EM DIFERENTES TELAS
@@ -345,6 +357,18 @@ mm.add("(min-width: 769px) and (max-width: 1366px)", () => {
       },
     });
 
+     gsap.from("footer div", {
+      y: 30,
+      opacity: 0,
+      duration: 1,
+      stagger:0.2,
+      scrollTrigger: {
+        trigger: "footer",
+        start: "top 40%",
+        markers: false,
+      },
+    });
+
 });
 
 // SEPARAÇÃO DAS ANIMAÇÕES EM DIFERENTES TELAS
@@ -354,7 +378,7 @@ mm.add("(min-width: 1367px) and (max-width: 1930px)", () => {
     ".cruzVerde",
     { rotate: 90, y: 0 },
     {
-      rotate: 0,
+      rotate: -12,
       y: 0,
       scrollTrigger: {
         trigger: ".hero",
@@ -401,13 +425,61 @@ mm.add("(min-width: 1367px) and (max-width: 1930px)", () => {
     },
   });
     
-    gsap.from(".pessoas", {
+    gsap.from(".pessoas div", {
+        y: 30,
+        opacity: 0,
+        duration:1,
+        stagger:0.1,
+        scrollTrigger: {
+            trigger: ".pessoas",
+            start: "top 40%",
+            markers:false,
+        }
+    })
+
+    gsap.from(".artistas div", {
+        y: 30,
+        opacity: 0,
+        duration:1,
+        stagger:0.1,
+        scrollTrigger: {
+            trigger: ".artistas",
+            start: "top 40%",
+            markers:false,
+        }
+    })
+
+    gsap.from(".logos img", {
+        y: 30,
+        opacity: 0,
+        duration:1.2,
+        stagger:0.1,
+        scrollTrigger: {
+            trigger: ".logos",
+            start: "top 55%",
+            markers:false,
+        }
+    })
+
+    gsap.from(".getStartedEnd", {
       y: 30,
       opacity: 0,
       duration: 1,
       scrollTrigger: {
-        trigger: ".pessoas",
-        start: "top 40%",
+        trigger: ".getStartedEnd",
+        start: "top 87%",
+        markers: false,
+      },
+    });
+
+     gsap.from("footer div", {
+      y: 30,
+      opacity: 0,
+      duration: 1,
+      stagger:0.2,
+      scrollTrigger: {
+        trigger: "footer",
+        start: "top 60%",
         markers: false,
       },
     });
@@ -441,15 +513,3 @@ function initTextScroll() {
 }
 
 initTextScroll();
-
-  gsap.from("footer div", {
-      y: 30,
-      opacity: 0,
-      duration: 1,
-      stagger:0.2,
-      scrollTrigger: {
-        trigger: "footer",
-        start: "top 40%",
-        markers: false,
-      },
-    });
