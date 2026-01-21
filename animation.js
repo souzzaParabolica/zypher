@@ -25,7 +25,7 @@ headerTl
       y: -20,
       opacity: 0,
       duration: 0.8,
-      stagger: 0.18,
+      stagger: 0.20,
     },
     "-=0.6"
   );
@@ -429,7 +429,7 @@ mm.add("(min-width: 1367px) and (max-width: 1930px)", () => {
     gsap.from(".pessoas div", {
         y: 30,
         opacity: 0,
-        duration:1,
+        duration:0.8,
         stagger:0.1,
         scrollTrigger: {
             trigger: ".pessoas",
@@ -445,7 +445,7 @@ mm.add("(min-width: 1367px) and (max-width: 1930px)", () => {
         stagger:0.1,
         scrollTrigger: {
             trigger: ".artistas",
-            start: "top 40%",
+            start: "top 45%",
             markers:false,
         }
     })
