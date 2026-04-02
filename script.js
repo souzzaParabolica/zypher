@@ -3,9 +3,9 @@ const lenis = new Lenis({
   autoRaf: true,
 });
 
-const backToTopBtn = document.getElementById("back-to-top");
+const backToTopBtn = document.getElementById('back-to-top');
 
-lenis.on("scroll", (e) => {
+lenis.on('scroll', (e) => {
   const scroll = e.scroll;
 
   if (scroll > 300) {
@@ -13,43 +13,43 @@ lenis.on("scroll", (e) => {
       opacity: 1,
       scale: 1,
       duration: 0.3,
-      ease: "power2.out",
-      pointerEvents: "auto",
+      ease: 'power2.out',
+      pointerEvents: 'auto',
     });
   } else {
     gsap.to(backToTopBtn, {
       opacity: 0,
       scale: 0.9,
       duration: 0.3,
-      ease: "power2.out",
-      pointerEvents: "none",
+      ease: 'power2.out',
+      pointerEvents: 'none',
     });
   }
 });
 
-backToTopBtn.addEventListener("click", () => {
+backToTopBtn.addEventListener('click', () => {
   lenis.scrollTo(0, {
     duration: 1,
     easing: (t) => 1 - Math.pow(1 - t, 3),
   });
 });
 
-document.addEventListener("DOMContentLoaded", function () {
-  const arrowButton = document.querySelector(".arrowDown");
+document.addEventListener('DOMContentLoaded', function () {
+  const arrowButton = document.querySelector('.arrowDown');
 
   if (!arrowButton) return;
 
   // Adiciona evento de clique
-  arrowButton.addEventListener("click", function (e) {
+  arrowButton.addEventListener('click', function (e) {
     e.preventDefault();
 
     // Efeito visual de clique
-    arrowButton.style.animation = "none"; // Pausa a animação de pulsação
-    arrowButton.style.transform = "scale(0.9)";
+    arrowButton.style.animation = 'none'; // Pausa a animação de pulsação
+    arrowButton.style.transform = 'scale(0.9)';
 
     setTimeout(() => {
-      arrowButton.style.animation = ""; // Retorna a animação
-      arrowButton.style.transform = "";
+      arrowButton.style.animation = ''; // Retorna a animação
+      arrowButton.style.transform = '';
     }, 300);
 
     // Encontra a seção howToBuild
@@ -59,7 +59,7 @@ document.addEventListener("DOMContentLoaded", function () {
       smoothScrollToSection(howToBuildSection);
     } else {
       // Fallback: scroll para a próxima seção
-      const nextSection = document.querySelector("section:nth-of-type(2)");
+      const nextSection = document.querySelector('section:nth-of-type(2)');
       if (nextSection) {
         smoothScrollToSection(nextSection);
       }
@@ -70,25 +70,24 @@ document.addEventListener("DOMContentLoaded", function () {
 function findHowToBuildSection() {
   // Tenta encontrar por diferentes seletores
   return (
-    document.getElementById("howToBuild") ||
+    document.getElementById('howToBuild') ||
     document.querySelector('[id*="howToBuild"]') ||
     document.querySelector('[id*="how-to-build"]') ||
     document.querySelector('[class*="howToBuild"]') ||
     document.querySelector('[class*="how-to-build"]') ||
-    document.querySelector("section:nth-of-type(2)")
+    document.querySelector('section:nth-of-type(2)')
   ); // Fallback para segunda seção
 }
 
 function smoothScrollToSection(element) {
-  const elementPosition =
-    element.getBoundingClientRect().top + window.pageYOffset;
+  const elementPosition = element.getBoundingClientRect().top + window.pageYOffset;
   const offsetPosition = elementPosition - 400; // Ajuste para o header fixo
 
   // Verifica se o navegador suporta scrollBehavior
-  if ("scrollBehavior" in document.documentElement.style) {
+  if ('scrollBehavior' in document.documentElement.style) {
     window.scrollTo({
       top: offsetPosition,
-      behavior: "smooth",
+      behavior: 'smooth',
     });
   } else {
     // Fallback para navegadores antigos
